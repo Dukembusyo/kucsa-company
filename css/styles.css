@@ -401,54 +401,33 @@ p {
 
 
 
-/* Reset & Box Sizing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* General Styling */
+/* General Styles */
 body {
-    font-family: "Arial", sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
 /* Section Containers */
 section {
     padding: 60px 20px;
     text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
-}
-
-/* Section Backgrounds */
-#unique-proposition, #creative-process, #testimonials {
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    padding: 60px 30px;
-    border-radius: 12px;
-}
-
-#about {
-    background: linear-gradient(to right, #2a5298, #0f0c29);
-    padding: 60px 30px;
-    border-radius: 12px;
 }
 
 /* Titles */
 h1, h2 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
     font-weight: bold;
-    margin-bottom: 25px;
     color: #ffcc00;
     text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: #ffcc00;
     margin-bottom: 15px;
 }
@@ -457,14 +436,28 @@ p {
     font-size: 1.2rem;
     margin-bottom: 20px;
     color: #ddd;
-    line-height: 1.8;
 }
 
-/* Grid Layouts */
+/* Background Gradients */
+#unique-proposition, #creative-process, #testimonials {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    padding: 60px 20px;
+    border-radius: 15px;
+}
+
+#about {
+    background: linear-gradient(to right, #2a5298, #0f0c29);
+    color: white;
+    padding: 60px 20px;
+    border-radius: 15px;
+}
+
+/* Grid Layout */
 .service-grid, .proposition-grid, .process-timeline {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 25px;
     justify-content: center;
     align-items: center;
 }
@@ -472,34 +465,33 @@ p {
 /* Service Items */
 .service-item {
     background: rgba(255, 255, 255, 0.15);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    padding: 25px;
+    border-radius: 15px;
+    padding: 30px;
     text-align: center;
-    box-shadow: 0 6px 14px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
 }
 
 /* Core Values Section */
 .proposition {
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 25px;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
     text-align: center;
-    box-shadow: 0 6px 14px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .proposition:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4);
 }
 
 /* Creative Process */
@@ -507,17 +499,16 @@ p {
     color: white;
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .process-step:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.5);
 }
 
 /* Step Icons */
@@ -527,8 +518,8 @@ p {
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -537,17 +528,16 @@ p {
 
 /* Testimonials */
 .testimonial {
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
 }
 
 .testimonial:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 18px rgba(255, 255, 255, 0.4);
 }
 
 /* Buttons */
@@ -555,26 +545,29 @@ p {
     display: inline-block;
     background: #ff0000;
     color: white;
-    padding: 14px 30px;
+    padding: 12px 25px;
     font-size: 1.2rem;
     border-radius: 8px;
     text-decoration: none;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .btn-secondary:hover, .cta .btn:hover {
     background: #941c1c;
-    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.6);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     h1, h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     h3 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     p {
@@ -593,16 +586,11 @@ p {
     .step-icon {
         margin-bottom: 10px;
     }
-
-    .btn-secondary, .cta .btn {
-        font-size: 1rem;
-        padding: 12px 25px;
-    }
 }
 
 @media (max-width: 480px) {
     h1, h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     h3 {
@@ -610,7 +598,7 @@ p {
     }
 
     p {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 
     .btn-secondary, .cta .btn {
@@ -618,7 +606,6 @@ p {
         padding: 10px 20px;
     }
 }
-
 
 
 
