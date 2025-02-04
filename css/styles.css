@@ -302,7 +302,7 @@ p {
 
 /* Typewriter Animation */
 .typed-text {
-    color: #f1c40f;
+    color: #dbd8ca;
     font-weight: bold;
 }
 
@@ -406,27 +406,33 @@ p {
 
 
 /* General Styles */
-
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
 
 /* Section Containers */
 section {
-    padding: 60px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
 /* Titles */
 h1, h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
     font-weight: bold;
+    margin-bottom: 20px;
     color: #ffcc00;
     text-transform: uppercase;
-    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+    text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.5);
 }
 
 h3 {
-    font-size: 1.7rem;
-    color: #ffcc00;
+    font-size: 1.8rem;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 
@@ -436,77 +442,61 @@ p {
     color: #ddd;
 }
 
-/* Background Gradients */
-#unique-proposition, #creative-process, #testimonials {
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: white;
-    padding: 60px 20px;
-    border-radius: 15px;
-}
-
-#about {
-    background: linear-gradient(to right, #2a5298, #0f0c29);
-    color: white;
-    padding: 60px 20px;
-    border-radius: 15px;
-}
-
-/* Grid Layout */
+/* Grid Layouts */
 .service-grid, .proposition-grid, .process-timeline {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     justify-content: center;
     align-items: center;
 }
 
-/* Service Items */
+/* Service Items (Perfectly Equal Boxes) */
 .service-item {
     background: rgba(255, 255, 255, 0.15);
-    border-radius: 15px;
-    padding: 30px;
+    border-radius: 12px;
+    padding: 25px;
     text-align: center;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    height: 250px; /* Ensures uniform height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
-/* Core Values Section */
+/* Core Values (Better Display & Positioning) */
 .proposition {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 30px;
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
     transition: transform 0.3s ease-in-out;
-    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .proposition:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
 }
 
 /* Creative Process */
 .process-step {
-    color: white;
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 25px;
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .process-step:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.3);
 }
 
 /* Step Icons */
@@ -516,46 +506,61 @@ p {
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    flex-shrink: 0;
 }
 
 /* Testimonials */
 .testimonial {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease-in-out;
 }
 
 .testimonial:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(255, 255, 255, 0.4);
+    transform: scale(1.03);
 }
 
 /* Buttons */
 .btn-secondary, .cta .btn {
     display: inline-block;
-    background: #ff0000;
+    background: linear-gradient(to right, #ff512f, #dd2476);
     color: white;
     padding: 12px 25px;
     font-size: 1.2rem;
     border-radius: 8px;
     text-decoration: none;
     transition: background 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
-    font-weight: bold;
-    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
 .btn-secondary:hover, .cta .btn:hover {
-    background: #941c1c;
-    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.6);
+    background: linear-gradient(to right, #e41e2b, #b3123f);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Background Gradients for Sections */
+#unique-proposition {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+#about {
+    background: linear-gradient(to right, #2a5298, #0f0c29);
+}
+
+#creative-process {
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+#testimonials {
+    background: linear-gradient(to right, #283048, #859398);
 }
 
 /* Responsive Adjustments */
@@ -569,7 +574,7 @@ p {
     }
 
     p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .service-grid, .proposition-grid, .process-timeline {
@@ -583,6 +588,11 @@ p {
 
     .step-icon {
         margin-bottom: 10px;
+    }
+
+    .btn-secondary, .cta .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 }
 
@@ -601,11 +611,9 @@ p {
 
     .btn-secondary, .cta .btn {
         font-size: 1rem;
-        padding: 10px 20px;
+        padding: 8px 16px;
     }
 }
-
-
 
 
 
