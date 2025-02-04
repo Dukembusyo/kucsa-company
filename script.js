@@ -36,43 +36,66 @@ function removeHighlights() {
 const slides = document.querySelectorAll(".slide");
 const typedTextElements = document.querySelectorAll(".typed-text");
 const cursorElements = document.querySelectorAll(".cursor");
+
 const typewriterTexts = [
-"Web Development",
-"UI/UX Design",
-"SEO Optimization",
-"E-Commerce Solutions",
-"Social Media Marketing",
-"Cloud Hosting",
-"Mobile App Development",
-"Digital Marketing",
-"Custom Solutions",
-"Business Automation"
+    "Web Development",
+    "UI/UX Design",
+    "SEO Optimization",
+    "E-Commerce Solutions",
+    "Social Media Marketing",
+    "Cloud Hosting",
+    "Mobile App Development",
+    "Digital Marketing",
+    "Custom Solutions",
+    "Business Automation"
 ];
-let textIndex = 0;
-let charIndex = 0;
+
+let textIndex = 0; 
+let charIndex = 0; 
 let currentSlideIndex = 0;
+let typingSpeed = 100;  // Speed of typing (milliseconds)
+let erasingSpeed = 50;  // Speed of erasing (milliseconds)
+let pauseBeforeErase = 2000; // Time before erasing starts
+let pauseBeforeType = 1000; // Time before new text starts typing
+
 function typeText() {
-const currentTypedText = typedTextElements[currentSlideIndex];
-const currentCursor = cursorElements[currentSlideIndex];
-const currentText = typewriterTexts[textIndex % typewriterTexts.length];
-if (charIndex < currentText.length) {
-currentTypedText.textContent += currentText.charAt(charIndex);
-charIndex++;
-setTimeout(typeText, 100);
-} else {
-setTimeout(() => eraseText(currentTypedText), 2000);
+    let currentTypedText = typedTextElements[currentSlideIndex];
+    let currentCursor = cursorElements[currentSlideIndex];
+
+    if (charIndex === 0) {
+        currentTypedText.textContent = ""; // Ensure it starts fresh
+    }
+
+    let currentText = typewriterTexts[textIndex % typewriterTexts.length];
+
+    if (charIndex < currentText.length) {
+        currentTypedText.textContent += currentText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeText, typingSpeed);
+    } else {
+        setTimeout(() => eraseText(currentTypedText), pauseBeforeErase);
+    }
+
+    // Blink Cursor Effect
+    currentCursor.style.opacity = (charIndex % 2 === 0) ? "1" : "0";
 }
-}
+
 function eraseText(element) {
-if (charIndex > 0) {
-element.textContent = element.textContent.slice(0, charIndex - 1);
-charIndex--;
-setTimeout(() => eraseText(element), 50);
-} else {
-textIndex++;
-setTimeout(typeText, 1000);
+    if (charIndex > 0) {
+        element.textContent = element.textContent.slice(0, charIndex - 1);
+        charIndex--;
+        setTimeout(() => eraseText(element), erasingSpeed);
+    } else {
+        textIndex++;
+        setTimeout(typeText, pauseBeforeType);
+    }
 }
-}
+
+// Start Typing Effect on Page Load
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(typeText, 500);
+});
+
 function changeSlide() {
 currentSlideIndex = (currentSlideIndex + 1) % slides.length;
 const sliderContainer = document.querySelector(".slider-container");
