@@ -6,7 +6,11 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
 /* Navbar */
@@ -402,13 +406,7 @@ p {
 
 
 /* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    color: white;
-    margin: 0;
-    padding: 0;
-}
+
 
 /* Section Containers */
 section {
