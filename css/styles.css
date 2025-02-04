@@ -401,7 +401,7 @@ p {
 
 
 
-/* General Reset */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -409,35 +409,144 @@ p {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #383636;
-    color: #333;
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
 }
 
 /* Section Containers */
 section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
 /* Titles */
 h1, h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #ffcc00;
+    text-transform: uppercase;
 }
 
 h3 {
     font-size: 1.5rem;
     color: #ffcc00;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 20px;
     color: #ddd;
+    line-height: 1.6;
+}
+
+/* Grid Layout */
+.service-grid, .proposition-grid, .process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Service Items */
+.service-item {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Core Values Section */
+.proposition {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.proposition:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Creative Process */
+.process-step {
+    color: white;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Step Icons */
+.step-icon {
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+/* Testimonials */
+.testimonial {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons */
+.btn-secondary, .cta .btn {
+    display: inline-block;
+    background: #ff0000;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-secondary:hover, .cta .btn:hover {
+    background: #941c1c;
+    transform: scale(1.05);
 }
 
 /* Background Gradients */
@@ -453,103 +562,10 @@ p {
     padding: 60px 20px;
 }
 
-/* Grid Layout */
-.service-grid, .proposition-grid, .process-timeline {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Service Items */
-.service-item {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
-}
-
-/* Core Values Section */
-.proposition {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center; /* Center Alignment */
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.proposition:hover {
-    transform: translateY(-5px);
-}
-
-/* Creative Process */
-.process-step {
-    color: white;
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.process-step:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.5);
-}
-
-/* Step Icons */
-.step-icon {
-    background-color: #ffcc00;
-    color: #000;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
-}
-
-/* Testimonials */
-.testimonial {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
-}
-
-/* Buttons */
-.btn-secondary, .cta .btn {
-    display: inline-block;
-    background: #ff0000;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.btn-secondary:hover, .cta .btn:hover {
-    background: #941c1c;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     h1, h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     h3 {
@@ -557,7 +573,7 @@ p {
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .service-grid, .proposition-grid, .process-timeline {
@@ -572,11 +588,16 @@ p {
     .step-icon {
         margin-bottom: 10px;
     }
+
+    .btn-secondary, .cta .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
 }
 
 @media (max-width: 480px) {
     h1, h2 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     h3 {
@@ -584,7 +605,7 @@ p {
     }
 
     p {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
 
     .btn-secondary, .cta .btn {
@@ -592,6 +613,10 @@ p {
         padding: 8px 16px;
     }
 }
+
+
+
+
 
         
 /* General Footer Styling */
