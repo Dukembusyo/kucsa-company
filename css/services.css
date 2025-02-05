@@ -319,8 +319,8 @@ body {
             }
             .slider-container img {
             position: absolute;
-            width: 70%; /* Each image takes up half the screen */
-            height: 100%;
+            width: 100%; /* Each image takes up half the screen */
+            height: 110%;
             top: 0;
             opacity: 0;
             border-radius: 10px;
