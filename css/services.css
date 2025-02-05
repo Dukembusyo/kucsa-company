@@ -319,7 +319,7 @@ body {
             }
             .slider-container img {
             position: absolute;
-            width: 100%; /* Each image takes up half the screen */
+            width: 70%; /* Each image takes up half the screen */
             height: 100%;
             top: 0;
             opacity: 0;
