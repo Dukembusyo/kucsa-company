@@ -69,93 +69,64 @@ rel="stylesheet">
 </header>
 
 
-<!-- Contact Page Section -->
-<section id="contact-us">
-    <div class="container">
-    <h1>Contact Us</h1>
-    <!-- Contact Information -->
-    <div class="contact-info">
-    <h3>We're Here to Help</h3>
-    <p>Feel free to reach out to us through the following methods:</p>
-    <div class="contact-methods">
-    <div class="contact-item">
-    <i class="fa fa-phone"></i>
-    <h4>Call Us</h4>
-    <p><a href="tel:+254768537010">+254 768 537 010</a></p>
-    </div>
-    <div class="contact-item">
-    <i class="fa fa-whatsapp"></i>
-    <h4>WhatsApp</h4>
-    <p><a href="https://wa.me/+254768537010">Chat on WhatsApp</a></p>
-    </div>
-    <div class="contact-item">
-    <i class="fa fa-envelope"></i>
-    <h4>Email Us</h4>
-    <p><a
-    href="mailto:4forcedevelopers@gmail.com">4forcedevelopers@gmail.com</a></p>
-    </div>
-    <div class="contact-item">
-    <i class="fa fa-facebook"></i>
-    <h4>Follow Us</h4>
-    <p><a href="#">Facebook</a></p>
-    </div>
-    </div>
-    </div>
-    <!-- Contact Us Section -->
-    <section class="contact-section">
-        <div class="container">
-          <h1>Contact Us</h1>
-          <p>Fill in the form below to get in touch or request services.</p>
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="fullName">Your Full Names *</label>
-              <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Your Email Address *</label>
-              <input type="email" id="email" name="email" placeholder="Email Address" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Your Phone Number *</label>
-              <input type="tel" id="phone" name="phone" placeholder="Mobile Number" required>
-            </div>
-            <div class="form-group">
-              <label for="services">Select One or Multiple Services *</label>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="services" value="Website Design"> Website Design</label>
-                <label><input type="checkbox" name="services" value="Website Maintenance"> Website Maintenance</label>
-                <label><input type="checkbox" name="services" value="Ecommerce"> Ecommerce</label>
-                <label><input type="checkbox" name="services" value="SEO"> SEO</label>
-                <label><input type="checkbox" name="services" value="Graphic Design"> Graphic Design</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="details">Request Details</label>
-              <textarea id="details" name="details" placeholder="Provide more details..."></textarea>
-            </div>
-            <div class="form-group">
-              <label for="howDidYouHear">How Did You Hear About Us?</label>
-              <select id="howDidYouHear" name="howDidYouHear">
+<div class="contact-container">
+    <h2>Request a Quote</h2>
+    <p>Request a quote now and take your online presence to the next level with our expert team.</p>
+
+    <form id="contactForm">
+        <div class="form-group">
+            <label>Your Full Name *</label>
+            <input type="text" name="full_name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Your Email Address *</label>
+            <input type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Your Phone Number *</label>
+            <input type="tel" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label>Your Company/Business Name</label>
+            <input type="text" name="company">
+        </div>
+
+        <h3>Select One or Multiple Services, Solutions, or Packages</h3>
+
+        <div class="services">
+            <label><input type="checkbox" name="service" value="Website Design"> Website Design</label>
+            <label><input type="checkbox" name="service" value="Software & Mobile App Development"> Software & Mobile App Development</label>
+            <label><input type="checkbox" name="service" value="E-commerce Website"> E-commerce Website</label>
+            <label><input type="checkbox" name="service" value="Payment Integration"> Payment Integration (M-PESA & others)</label>
+            <label><input type="checkbox" name="service" value="Graphic Design"> Graphic Design, Printing & Branding</label>
+            <label><input type="checkbox" name="service" value="Photography & Video"> Photography & Video Production</label>
+        </div>
+
+        <div class="form-group">
+            <label>How Did You Hear About Us?</label>
+            <select name="referral">
                 <option value="Google">Google</option>
                 <option value="Social Media">Social Media</option>
                 <option value="Referral">Referral</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label><input type="checkbox" required> I consent to have this website store my information.</label>
-            </div>
-            <button type="submit">Submit</button>
-          </form>
+                <option value="Others">Others</option>
+            </select>
         </div>
-      </section>
 
+        <div class="form-group">
+            <label>Request Details</label>
+            <textarea name="message" rows="4"></textarea>
+        </div>
 
-    <div class="contact-item">
-        <i class="fa fa-envelope"></i>
-        <h4>Email Us</h4>
-        <p><span id="email-text">4forcedevelopers@gmail.com</span> 
-        <button onclick="copyToClipboard('email-text')">📋 Copy</button></p>
-    </div>
+        <div class="form-group">
+            <input type="checkbox" required> I consent to have this website store my submitted information so they can respond to my inquiry.
+        </div>
+
+        <button type="submit" id="submitBtn">REQUEST QUOTE / CALL BACK</button>
+    </form>
+</div>
     
     
     <!-- Google Map -->
