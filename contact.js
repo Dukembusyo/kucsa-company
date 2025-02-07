@@ -20,7 +20,7 @@ document.getElementById("contactForm").addEventListener("submit", function (even
     event.preventDefault();
 
     let formData = new FormData(this);
-    let googleFormURL = "https://docs.google.com/forms/d/e/your_google_form_id/formResponse"; 
+    let googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSfZWsdFjoSBIiyW1wCxJ1mmcqG926XfYMZKAIYs1-0545cX7g/viewform?usp=header";  
 
     let formParams = new URLSearchParams();
     formData.forEach((value, key) => {

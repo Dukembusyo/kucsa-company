@@ -201,6 +201,8 @@ body {
 .contact-container {
     width: 50%;
     background: white;
+    justify-content:center;
+    text-align:center;
     padding: 30px;
     margin-top: 50px;
     border-radius: 10px;
