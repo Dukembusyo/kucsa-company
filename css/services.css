@@ -324,18 +324,17 @@ body {
     border-radius: 15px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     margin: 40px auto;
-    position: relative;
 }
 
 /* 📌 Slider Track */
 .slider {
     display: flex;
-    width: 100%;
+    width: 500%; /* Adjust for images + message */
     height: 100%;
-    transition: transform 0.6s ease-in-out;
+    animation: slide 12s infinite ease-in-out;
 }
 
-/* 📌 Ensure Each Image Fills the Container */
+/* 📌 Ensure Each Image Takes Full Width */
 .slider img {
     flex: 0 0 100%;
     width: 100%;
@@ -345,29 +344,29 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 📌 Default Message When No Image is Shown */
-.slider-container::before {
+/* 📌 Welcome Message Slide */
+.slider::after {
     content: "Welcome to 4Force Developers! Looking forward to doing business with you.";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
     border-radius: 15px;
-    z-index: 1;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
 }
 
-/* 📌 Hide the message when images are present */
-.slider img:first-child {
-    display: block;
+/* 📌 Animation for Sliding */
+@keyframes slide {
+    0%, 20% { transform: translateX(0%); } /* First Image */
+    25%, 45% { transform: translateX(-100%); } /* Second Image */
+    50%, 70% { transform: translateX(-200%); } /* Third Image */
+    75%, 95% { transform: translateX(-300%); } /* Fourth Image */
+    100% { transform: translateX(-400%); } /* Welcome Message */
 }
 
 /* 📌 Responsive Design */
@@ -376,8 +375,8 @@ body {
         width: 90%;
         height: 50vh;
     }
-    .slider-container::before {
-        font-size: 1.2rem;
+    .slider::after {
+        font-size: 1.5rem;
     }
 }
 
@@ -386,8 +385,8 @@ body {
         width: 95%;
         height: 40vh;
     }
-    .slider-container::before {
-        font-size: 1rem;
+    .slider::after {
+        font-size: 1.2rem;
     }
 }
 
@@ -400,25 +399,8 @@ body {
 
 
 
-            /* Animation for sliding from the left */
-            @keyframes slideLeft {
-            from {
-            transform: translateX(100%);
-            }
-            to {
-            transform: translateX(0);
-            }
-            }
-            /* Animation for sliding from the right */
-            @keyframes slideRight {
-            from {
-            transform: translateX(-100%);
-            }
-            to {
-            transform: translateX(0);
-            }
-            }
-            
+
+
         
         .packages {
             text-align: center;
