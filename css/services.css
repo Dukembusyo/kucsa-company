@@ -346,7 +346,7 @@ body {
 
 /* 📌 Welcome Message Slide */
 .slider::after {
-    content: "Welcome to 4Force Developers! Looking forward to doing business with you.";
+
     display: flex;
     justify-content: center;
     align-items: center;
