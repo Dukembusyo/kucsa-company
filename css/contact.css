@@ -197,12 +197,18 @@ body {
         padding: 4px 8px;
     }
 }
+.contact-contain {
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
 
 .contact-container {
     width: 50%;
     background: white;
-    justify-content:center;
-    text-align:center;
+ 
     padding: 30px;
     margin-top: 50px;
     border-radius: 10px;
