@@ -102,30 +102,52 @@ rel="stylesheet">
     </div>
     </div>
     <!-- Contact Us Section -->
-<section class="contact">
-    <h2>Contact Us</h2>
-    <p>Get in touch with us for any inquiries or service requests.</p>
-    <form id="contact-form">
-    <input type="text" id="full-name" placeholder="Full Name" required>
-    <input type="email" id="email" placeholder="Email Address" required>
-    <input type="tel" id="phone" placeholder="Phone Number" required>
-    <select id="service" required>
-    <option value="" disabled selected>Select Service Interested</option>
-    <option value="Web Development">Web Development</option>
-    <option value="UI/UX Design">UI/UX Design</option>
-    <option value="Mobile App Development">Mobile App Development</option>
-    <option value="Digital Marketing">Digital Marketing</option>
-    <option value="IT Support">IT Support</option>
-    <option value="Other">Other</option>
-    </select>
-    <textarea id="message" placeholder="Describe the service you need..."
-    required></textarea>
-    <button type="submit">Send Message</button>
-    </form>
-    <!-- Success Message (Hidden Initially) -->
-    <p id="success-message" class="hidden">✅ Your message has been sent
-    successfully!</p>
-    </section>
+    <section class="contact-section">
+        <div class="container">
+          <h1>Contact Us</h1>
+          <p>Fill in the form below to get in touch or request services.</p>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="fullName">Your Full Names *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Your Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="Mobile Number" required>
+            </div>
+            <div class="form-group">
+              <label for="services">Select One or Multiple Services *</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="services" value="Website Design"> Website Design</label>
+                <label><input type="checkbox" name="services" value="Website Maintenance"> Website Maintenance</label>
+                <label><input type="checkbox" name="services" value="Ecommerce"> Ecommerce</label>
+                <label><input type="checkbox" name="services" value="SEO"> SEO</label>
+                <label><input type="checkbox" name="services" value="Graphic Design"> Graphic Design</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="details">Request Details</label>
+              <textarea id="details" name="details" placeholder="Provide more details..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="howDidYouHear">How Did You Hear About Us?</label>
+              <select id="howDidYouHear" name="howDidYouHear">
+                <option value="Google">Google</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Referral">Referral</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label><input type="checkbox" required> I consent to have this website store my information.</label>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
 
 
     <div class="contact-item">
