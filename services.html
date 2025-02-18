@@ -77,19 +77,48 @@
     </div>
 
 
-    <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
-    
-    <div class="sidebar" id="sidebar">
-        <a href="#web-development">Web Development</a>
-        <a href="#ui-ux">UI/UX Design</a>
-        <a href="#mobile-app">Mobile App Development</a>
-        <a href="#hosting">Hosting & Domain</a>
-    </div>
-    
-    <div class="content">
-        <h2>Welcome to Our Services</h2>
-        <p>Click on the menu to navigate through our services.</p>
-    </div>
+    <aside class="sidebar">
+        <button id="toggle-btn" class="toggle-btn">☰</button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#web-development">Web Development</a>
+                    <ul class="sub-menu">
+                        <li><a href="#web-starter">Starter Package</a></li>
+                        <li><a href="#web-professional">Professional Package</a></li>
+                        <li><a href="#web-enterprise">Enterprise Package</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#ui-ux">UI/UX Design</a>
+                    <ul class="sub-menu">
+                        <li><a href="#ui-starter">Starter Package</a></li>
+                        <li><a href="#ui-professional">Professional Package</a></li>
+                        <li><a href="#ui-enterprise">Enterprise Package</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#mobile-app">Mobile App Development</a>
+                    <ul class="sub-menu">
+                        <li><a href="#mobile-starter">Starter Package</a></li>
+                        <li><a href="#mobile-professional">Professional Package</a></li>
+                        <li><a href="#mobile-enterprise">Enterprise Package</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#hosting">Hosting & Domain</a>
+                    <ul class="sub-menu">
+                        <li><a href="#hosting-basic">Basic Hosting</a></li>
+                        <li><a href="#hosting-vps">VPS Hosting</a></li>
+                        <li><a href="#hosting-cloud">Cloud Hosting</a></li>
+                        <li><a href="#hosting-business">Business Hosting</a></li>
+                        <li><a href="#hosting-dedicated">Dedicated Hosting</a></li>
+                        <li><a href="#hosting-enterprise">Enterprise Hosting</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
     
     
 
