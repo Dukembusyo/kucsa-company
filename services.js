@@ -180,9 +180,16 @@ const services = [
     
 
 
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('hidden');
+        });
 
+        document.getElementById('close-sidebar').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.add('hidden');
+        });
 
-
-        document.getElementById("menu-toggle").addEventListener("click", function() {
-            document.getElementById("sidebar").classList.toggle("hidden");
+        document.querySelectorAll('.toggle-packages').forEach(button => {
+            button.addEventListener('click', function() {
+                this.nextElementSibling.classList.toggle('hidden');
+            });
         });

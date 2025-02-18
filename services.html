@@ -77,48 +77,34 @@
     </div>
 
 
-    <aside class="sidebar">
-        <button id="toggle-btn" class="toggle-btn">☰</button>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#web-development">Web Development</a>
-                    <ul class="sub-menu">
-                        <li><a href="#web-starter">Starter Package</a></li>
-                        <li><a href="#web-professional">Professional Package</a></li>
-                        <li><a href="#web-enterprise">Enterprise Package</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#ui-ux">UI/UX Design</a>
-                    <ul class="sub-menu">
-                        <li><a href="#ui-starter">Starter Package</a></li>
-                        <li><a href="#ui-professional">Professional Package</a></li>
-                        <li><a href="#ui-enterprise">Enterprise Package</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#mobile-app">Mobile App Development</a>
-                    <ul class="sub-menu">
-                        <li><a href="#mobile-starter">Starter Package</a></li>
-                        <li><a href="#mobile-professional">Professional Package</a></li>
-                        <li><a href="#mobile-enterprise">Enterprise Package</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#hosting">Hosting & Domain</a>
-                    <ul class="sub-menu">
-                        <li><a href="#hosting-basic">Basic Hosting</a></li>
-                        <li><a href="#hosting-vps">VPS Hosting</a></li>
-                        <li><a href="#hosting-cloud">Cloud Hosting</a></li>
-                        <li><a href="#hosting-business">Business Hosting</a></li>
-                        <li><a href="#hosting-dedicated">Dedicated Hosting</a></li>
-                        <li><a href="#hosting-enterprise">Enterprise Hosting</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </aside>
+    <button id="menu-toggle">☰ Menu</button>
+    <nav id="sidebar" class="hidden">
+        <button id="close-sidebar">✖ Close</button>
+        <ul>
+            <li><a href="#web-development" class="service-link">Web Development</a></li>
+            <li><a href="#ui-ux" class="service-link">UI/UX Design</a></li>
+            <li><a href="#mobile-app" class="service-link">Mobile App Development</a></li>
+            <li><a href="#hosting" class="service-link">Hosting & Domain</a></li>
+        </ul>
+    </nav>
+    
+    <section id="web-development" class="service-section">
+        <h2>Web Development</h2>
+        <p>Transform your online presence with our web development services.</p>
+        <button class="toggle-packages">View Packages</button>
+        <div class="packages hidden">
+            
+        </div>
+    </section>
+    
+    <section id="ui-ux" class="service-section">
+        <h2>UI/UX Design</h2>
+        <p>We craft visually appealing and intuitive interfaces.</p>
+        <button class="toggle-packages">View Packages</button>
+        <div class="packages hidden">
+
+        </div>
+    </section>
     
     
 
