@@ -183,6 +183,6 @@ const services = [
 
 
 
-        document.getElementById("toggle-btn").addEventListener("click", function() {
-            document.querySelector(".sidebar").classList.toggle("collapsed");
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("hidden");
         });
