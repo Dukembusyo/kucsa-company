@@ -49,7 +49,6 @@
 }
 
 
-/* dropdown */
 /* Dropdown container */
 .dropdown {
     position: relative;
@@ -91,6 +90,7 @@
 .dropdown.show .dropdown-menu {
     display: block;
 }
+
 
 
 /* Search Bar */
