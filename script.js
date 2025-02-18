@@ -210,3 +210,25 @@ function resetHighlights() {
 }
 
     
+
+
+// Function to toggle the dropdown menu
+function toggleDropdown() {
+    var dropdown = document.querySelector('.dropdown');
+    dropdown.classList.toggle('show');
+}
+
+// Event listener for the dropdown button
+var dropbtn = document.querySelector('.dropbtn');
+dropbtn.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    toggleDropdown();
+});
+
+// Close the dropdown if the user clicks outside of it
+window.addEventListener('click', function(event) {
+    var dropdown = document.querySelector('.dropdown');
+    if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove('show');
+    }
+});
