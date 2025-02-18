@@ -77,34 +77,25 @@
     </div>
 
 
-    <button id="menu-toggle">☰ Menu</button>
-    <nav id="sidebar" class="hidden">
-        <button id="close-sidebar">✖ Close</button>
-        <ul>
-            <li><a href="#web-development" class="service-link">Web Development</a></li>
-            <li><a href="#ui-ux" class="service-link">UI/UX Design</a></li>
-            <li><a href="#mobile-app" class="service-link">Mobile App Development</a></li>
-            <li><a href="#hosting" class="service-link">Hosting & Domain</a></li>
-        </ul>
-    </nav>
+    <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
     
-    <section id="web-development" class="service-section">
-        <h2>Web Development</h2>
-        <p>Transform your online presence with our web development services.</p>
-        <button class="toggle-packages">View Packages</button>
-        <div class="packages hidden">
-            
-        </div>
-    </section>
+    <div class="sidebar" id="sidebar">
+        <a href="#web-development">Web Development</a>
+        <a href="#ui-ux">UI/UX Design</a>
+        <a href="#mobile-app">Mobile App Development</a>
+        <a href="#hosting">Hosting & Domain</a>
+    </div>
     
-    <section id="ui-ux" class="service-section">
-        <h2>UI/UX Design</h2>
-        <p>We craft visually appealing and intuitive interfaces.</p>
-        <button class="toggle-packages">View Packages</button>
-        <div class="packages hidden">
+    <div class="content">
+        <h2>Welcome to Our Services</h2>
+        <p>Click on the menu to navigate through our services.</p>
+    </div>
 
-        </div>
-    </section>
+
+
+
+
+
     
     
 

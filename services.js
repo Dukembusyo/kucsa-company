@@ -179,17 +179,14 @@ const services = [
 
     
 
-
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.getElementById('sidebar').classList.toggle('hidden');
-        });
-
-        document.getElementById('close-sidebar').addEventListener('click', function() {
-            document.getElementById('sidebar').classList.add('hidden');
-        });
-
-        document.querySelectorAll('.toggle-packages').forEach(button => {
-            button.addEventListener('click', function() {
-                this.nextElementSibling.classList.toggle('hidden');
-            });
-        });
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            var content = document.querySelector(".content");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+                content.style.marginLeft = "0";
+            } else {
+                sidebar.style.width = "250px";
+                content.style.marginLeft = "250px";
+            }
+        }
