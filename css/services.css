@@ -1043,6 +1043,7 @@ html, body {
     position: fixed;
     top: 10px;
     left: 10px;
+    z-index: 1000; /* Ensures button stays above the content */
 }
 
 @media (min-width: 769px) {
@@ -1050,6 +1051,7 @@ html, body {
         width: 250px;
         position: static;
         display: block;
+        overflow: auto;
     }
     .content {
         margin-left: 250px;
