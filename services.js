@@ -189,15 +189,15 @@ const services = [
                 event.preventDefault();
                 let isVisible = menu.style.display === "block";
                 menu.style.display = isVisible ? "none" : "block";
+                menu.style.opacity = isVisible ? "0" : "1";
+                menu.style.visibility = isVisible ? "hidden" : "visible";
             });
         
             document.addEventListener("click", function (event) {
                 if (!dropdown.contains(event.target)) {
                     menu.style.display = "none";
+                    menu.style.opacity = "0";
+                    menu.style.visibility = "hidden";
                 }
             });
         });
-        
-
-    
-
