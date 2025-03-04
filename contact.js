@@ -20,25 +20,23 @@ document.getElementById("contactForm").addEventListener("submit", function (even
     event.preventDefault();
 
     let formData = new FormData(this);
-    let googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSfZWsdFjoSBIiyW1wCxJ1mmcqG926XfYMZKAIYs1-0545cX7g/viewform?usp=header";  
+    let emailReceiver = "4forcedevelopers@gmail.com";  // Your email
 
-    let formParams = new URLSearchParams();
+    let mailtoLink = `mailto:${emailReceiver}?subject=New Quote Request&body=`;
+
+    // Append form data to email body
     formData.forEach((value, key) => {
-        formParams.append(key, value);
+        mailtoLink += `${encodeURIComponent(key)}: ${encodeURIComponent(value)}%0A`;
     });
 
-    fetch(googleFormURL, {
-        method: "POST",
-        body: formParams,
-        mode: "no-cors"
-    })
-    .then(() => {
-        alert("Your request has been submitted successfully! We'll contact you soon.");
-        document.getElementById("contactForm").reset();
-    })
-    .catch(() => {
-        alert("Something went wrong! Please try again.");
-    });
+    // Open user's email client with pre-filled details
+    window.location.href = mailtoLink;
+
+    // Show success message
+    alert("Your request has been prepared for email submission. Please check your email client.");
+
+    // Reset the form after submission
+    this.reset();
 });
 
 
