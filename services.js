@@ -174,7 +174,29 @@ const services = [
             alert("Your message has been sent! A representative will reply soon.");
         });
         
-            
+
+
+
+
+      
+        
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let dropdown = document.querySelector(".dropdown");
+            let menu = dropdown.querySelector(".dropdown-menu");
+        
+            dropdown.addEventListener("click", function (event) {
+                event.preventDefault();
+                let isVisible = menu.style.display === "block";
+                menu.style.display = isVisible ? "none" : "block";
+            });
+        
+            document.addEventListener("click", function (event) {
+                if (!dropdown.contains(event.target)) {
+                    menu.style.display = "none";
+                }
+            });
+        });
         
 
     
