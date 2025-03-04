@@ -94,3 +94,37 @@ document.getElementById("contactForm").addEventListener("submit", function (even
         });
     }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let dropdown = document.querySelector(".dropdown");
+        let menu = dropdown.querySelector(".dropdown-menu");
+    
+        dropdown.addEventListener("click", function (event) {
+            event.preventDefault();
+            let isVisible = menu.style.display === "block";
+            menu.style.display = isVisible ? "none" : "block";
+            menu.style.opacity = isVisible ? "0" : "1";
+            menu.style.visibility = isVisible ? "hidden" : "visible";
+        });
+    
+        document.addEventListener("click", function (event) {
+            if (!dropdown.contains(event.target)) {
+                menu.style.display = "none";
+                menu.style.opacity = "0";
+                menu.style.visibility = "hidden";
+            }
+        });
+    });
+    

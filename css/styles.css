@@ -49,46 +49,69 @@
 }
 
 
-/* Dropdown container */
+/* Corrected Dropdown Menu */
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
-/* Dropdown button */
-.dropbtn {
-    background-color: #444;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
+.dropdown a {
     cursor: pointer;
+    position: relative;
+    padding: 5px 8px;
 }
 
-/* Dropdown menu */
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #444;
+    background: #333;
     list-style: none;
-    padding: 10px;
-    border-radius: 5px;
     top: 100%;
     left: 0;
-    margin: 0;
+    width: 220px;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
+    visibility: hidden;
 }
 
-/* Dropdown menu items */
-.dropdown-menu li a {
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px;
     color: white;
-    padding: 8px 12px;
     text-decoration: none;
-    display: block;
+    transition: background 0.3s;
 }
 
-/* Show the dropdown menu when the dropdown container has the 'show' class */
-.dropdown.show .dropdown-menu {
+.dropdown-menu a:hover {
+    background: #444;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Enable dropdown click for mobile */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: relative;
+        width: 100%;
+    }
+
+    .dropdown-menu a {
+        padding: 10px;
+        display: block;
+    }
 }
 
 

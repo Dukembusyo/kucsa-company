@@ -212,23 +212,27 @@ function resetHighlights() {
     
 
 
-// Function to toggle the dropdown menu
-function toggleDropdown(event) {
-    event.stopPropagation(); // Prevent the click event from bubbling up
-    var dropdown = event.currentTarget.parentElement;
-    dropdown.classList.toggle('show');
-}
 
-// Event listener for the dropdown button
-var dropbtn = document.querySelector('.dropbtn');
-dropbtn.addEventListener('click', toggleDropdown);
 
-// Close the dropdown if the user clicks outside of it
-window.addEventListener('click', function(event) {
-    var dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(function(dropdown) {
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let dropdown = document.querySelector(".dropdown");
+    let menu = dropdown.querySelector(".dropdown-menu");
+
+    dropdown.addEventListener("click", function (event) {
+        event.preventDefault();
+        let isVisible = menu.style.display === "block";
+        menu.style.display = isVisible ? "none" : "block";
+        menu.style.opacity = isVisible ? "0" : "1";
+        menu.style.visibility = isVisible ? "hidden" : "visible";
+    });
+
+    document.addEventListener("click", function (event) {
         if (!dropdown.contains(event.target)) {
-            dropdown.classList.remove('show');
+            menu.style.display = "none";
+            menu.style.opacity = "0";
+            menu.style.visibility = "hidden";
         }
     });
 });
